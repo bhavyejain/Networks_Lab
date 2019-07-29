@@ -34,23 +34,20 @@ int main(int argc, char const *argv[]) {
     address.sin_port = htons(PORT);
 
     // Bind the socket to localhost 8080
-    if (bind(sockfd, (struct sockaddr *)&address, sizeof(address))<0) 
-    { 
+    if (bind(sockfd, (struct sockaddr *)&address, sizeof(address))<0) { 
         perror("bind failed"); 
         exit(EXIT_FAILURE); 
     }
 
     printf("Server listening...\n");
 
-    if (listen(sockfd, 3) < 0) 	// Wait for client to make approach. Backlog here is 3 (max size of wait queue).
-    { 
+    if (listen(sockfd, 3) < 0) {	// Wait for client to make approach. Backlog here is 3 (max size of wait queue). 
         perror("listen"); 
         exit(EXIT_FAILURE); 
     }
 
     // Extract the first connection from pending queue and establish connection b/w client and server by creating a new socket.
-    if ((newSocket = accept(sockfd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) 	
-    { 
+    if ((newSocket = accept(sockfd, (struct sockaddr *)&address, (socklen_t*)&addrlen))<0) {
         perror("accept"); 
         exit(EXIT_FAILURE); 
     }
