@@ -1,3 +1,11 @@
+/**
+* @file q1_client.c
+* @brief client program for 2 node connection demonstration
+*
+* @author Bhavye Jain
+* @date July 2019
+*/
+
 #include <stdio.h> 
 #include <sys/socket.h> 
 #include <arpa/inet.h> 

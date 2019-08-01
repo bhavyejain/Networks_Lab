@@ -1,3 +1,11 @@
+/**
+* @file q1_server.c
+* @brief server program for 2 node connection demonstration
+*
+* @author Bhavye Jain
+* @date July 2019
+*/
+
 #include <unistd.h>
 #include <stdio.h> 
 #include <sys/socket.h> 
