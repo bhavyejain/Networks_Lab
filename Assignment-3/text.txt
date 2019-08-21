@@ -1,0 +1,2 @@
+Hello world! This is a test text for assignment 2
+of CSN_361 Computer Networks Laboratory!
